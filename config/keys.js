@@ -1,6 +1,5 @@
-module.exports = {
-  //remove mongodb server
-  //mongoURL : 'mongodb://eric:0111@ds153869.mlab.com:53869/megadev'
-  //local mongodb server
-  mongoURL : 'mongodb://eric:0111@localhost:27017/megadev'
+if(process.env.NODE_ENV === 'production') {
+  module.exports = require('./keys_prod');
+} else {
+  module.exports = require('./keys_dev');
 }

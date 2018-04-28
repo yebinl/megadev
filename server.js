@@ -1,6 +1,10 @@
 // Require modules
 const express = require('express');               //express
 const mongoose = require('mongoose');             //mongodb
+const bodyParser = require('body-parser');        //bodyParser
+const passport = require('passport');             //passport to auth users
+const path = require('path');                     //pass module for production line
+
 const users = require('./routes/api/users');      //users routes
 const profiles = require('./routes/api/profiles');//profiles routes
 const posts = require('./routes/api/posts');      //posts routes
@@ -16,8 +20,20 @@ mongoose
   .then(() => console.log('MongoDB connected!'))
   .catch(error => console.log(error));            //db connection
 
-
 // Middleware part
+app.use(bodyParser.urlencoded({ extended : false })); //bodyParser middleware
+app.use(bodyParser.json());                           //bodyParser middleware
+app.use(passport.initialize());                       //passport middleware
+require('./config/passport')(passport);               //passport configuration
+
+//Server static assets if in production
+if(process.env.NODE_ENV == 'production') {
+  //set static folder
+  app.use(express.static('client/build'));
+  app.get('*', (req, res) => {
+    res.sentFile(path.resolve(__dirname, 'client', 'build', 'index.html'));
+  });
+}
 
 
 
