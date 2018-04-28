@@ -1,6 +1,7 @@
-<<<<<<< HEAD
-npm run dev
-=======
-# megadev
-A social network web application for developers
->>>>>>> 15293c14df4e45ee2413fc157375e6dfb9d01c31
+Megadev
+It's a social network web application for developers
+
+Using MongoDB, Node.js, Express, React, Redux, Bootstrap.
+
+TYPE: npm run dev
+Run the server. It will automatically run the React client server.
