@@ -20,7 +20,7 @@ class Navbar extends React.Component {
       <Link className="btn btn-outline-primary pl-4 pr-4 mr-4" to="/login">Login</Link>
     );
     return (
-        <div className="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-4 bg-light border-bottom box-shadow">
+        <div className="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-4 bg-light border-bottom box-shadow navdiv">
           <h5 className="my-0 ml-4 mr-md-auto font-weight-normal">
             <Link className="navlogo" to="/">Mega<strong>Developer</strong></Link>
           </h5>

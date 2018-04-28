@@ -268,7 +268,7 @@ class EditProfile extends Component {
                 value={this.state.location}
                 onChange={this.onChange}
                 error={errors.location}
-                info="City or city & state suggested (eg. Boston, MA)"
+                info="City or city and state suggested (eg. Boston, MA)"
               />
               <TextFieldGroup
                 placeholder="Github Username"
@@ -302,7 +302,7 @@ class EditProfile extends Component {
                 <input
                   type="submit"
                   value="Submit"
-                  className="btn btn-primary btn-block mt-4"
+                  className="btn btn-success btn-block mt-4"
                 />
               </form>
             </div>
