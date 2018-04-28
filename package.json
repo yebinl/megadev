@@ -9,8 +9,8 @@
     "server": "nodemon server.js",
     "client": "npm start --prefix client",
     "dev": "concurrently \"npm run server\" \"npm run client\"",
-    "heroku-postbuild" :
-    "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client"
+    "heroku-postbuild":
+      "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client"
   },
   "author": "Eric Lee",
   "license": "MIT",
@@ -27,10 +27,6 @@
     "passport": "^0.4.0",
     "passport-jwt": "^4.0.0",
     "validator": "^9.4.1"
-  },
-  "engines": {
-    "node": "8.11.1",
-    "npm": "6.0.0"
   },
   "devDependencies": {
     "nodemon": "^1.17.3"
